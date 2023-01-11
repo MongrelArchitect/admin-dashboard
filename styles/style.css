@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #ddd;
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  display: grid;
+  grid-template: clamp(150px, 25%, 225px) 3fr / clamp(200px, 25%, 300px) 3fr;
+  height: 100%;
+  width: 100%;
+}
+
+.content {
+  background: #ff5;
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.header {
+  background: #5ff;
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.sidebar {
+  background: #5f5;
+  grid-area: 1 / 1 / 3 / 2;
+}

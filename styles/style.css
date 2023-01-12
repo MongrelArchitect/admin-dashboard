@@ -79,6 +79,21 @@ body {
   font-weight: bold;
 }
 
+.attribution {
+  color: #444;
+  display: flex;
+  font-size: 0.9rem;
+  margin-top: auto;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.attribution a {
+  color: #339;
+  font-weight: bold;
+  text-decoration: none;
+}
+
 .container {
   display: grid;
   grid-template: clamp(150px, 25%, 200px) 3fr / clamp(200px, 25%, 300px) 3fr;
@@ -116,7 +131,7 @@ body {
 }
 
 .greeting p {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 
 .header {

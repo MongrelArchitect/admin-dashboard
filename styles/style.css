@@ -26,8 +26,57 @@ body {
   padding: 8px 20px 8px 20px;
 }
 
+.announcement {
+  border-top: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: space-between;
+  padding: 14px 8px 8px 8px;
+}
+
+.announcement > p:first-child,
+.trend > span {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.announcement > p:nth-child(2),
+.trend > span > p {
+  color: #111;
+  font-size: 0.85em;
+  font-weight: normal;
+}
+
+.announcement-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px #444;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px;
+}
+
+.announcement-card div:first-child {
+  border: none;
+}
+
 .announcements {
+  display: grid;
   grid-area: 1 / 2 / 2 / 3;
+  grid-template-rows: 30px 3fr;
+  padding: 12px;
+  overflow: auto;
+}
+
+
+.announcements > p,
+.trending > p {
+  align-self: center;
+  padding: 12px;
+  font-weight: bold;
 }
 
 .container {
@@ -43,10 +92,6 @@ body {
   grid-area: 2 / 2 / 3 / 3;
   grid-template: 1fr 1fr / minmax(400px, 3fr) 1fr;
   overflow: auto;
-}
-
-.content-item {
-  border: 2px solid red;
 }
 
 .dashboard {
@@ -76,13 +121,13 @@ body {
 
 .header {
   background: #fff;
-  box-shadow: 0 2px 4px #bbb;
   display: grid;
+  box-shadow: 0 4px 4px -3px #000;
   overflow: auto;
-  /* Need relative position for box-shadow to show up*/
   position: relative;
   grid-area: 1 / 2 / 2 / 3;
   grid-template: 1fr 1fr / 3fr 1fr;
+  z-index: 9;
 }
 
 .navigation ul,
@@ -172,6 +217,8 @@ body {
 
 .sidebar {
   background: #ddf;
+  box-shadow: 4px 0 4px -3px #444;
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 48px;
@@ -187,8 +234,27 @@ body {
   height: 50px;
 }
 
+.trend {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+}
+
+.trend img {
+  border-radius: 50%;
+  height: 60px;
+}
+
+.trend p {
+  margin-top: 4px;
+}
+
 .trending {
+  display: grid;
   grid-area: 2 / 2 / 3 / 3;
+  grid-template-rows: 30px 3fr;
+  overflow: auto;
+  padding: 12px;
 }
 
 .user {
